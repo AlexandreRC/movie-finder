@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.off {
+    display: none;
+}
+
+.App {
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    max-width: 1360px;
+    margin: auto;
+    
+    .focused-movie-popup {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        .spinner{
+            position: fixed;
+            top:calc(50% - 60px) ;
+            left: calc(50% - 60px);
+            margin: auto;
+        }
+        .focused-movie {
+            background-color: #fefefe;
+            display: flex;
+            margin: auto;
+            transform: translateY(50%);
+            padding: 0;
+            width: 90%;
+            max-width: 1180px; 
+            .close-icon {
+                cursor: pointer;
+                width: 36px;
+                height: 36px;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
+            .focused-movie-details {
+                margin: 72px 67px 0 26px;
+                display: flex;
+                flex-direction: column;
+                .focused-movie-title {
+                    font-size: 36px;
+                }
+                .focused-movie-date {
+                    font-size: 15px;
+                    color: rgb(60, 60, 60);
+                    margin-bottom: 10px;
+                }
+                .focused-movie-rate {
+                    display: flex;
+                    gap: 5px;
+                    color: rgb(80, 80, 80);
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                .focused-movie-genre {
+                    margin-bottom: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    column-gap: 20px;
+                    row-gap: 5px;
+                    > *{ 
+                        font-size: 15px;
+                        padding: 4px 14px;
+                        border: 1px solid rgb(60, 60, 60);
+                        border-radius: 4px;
+                    }
+                }
+                p {
+                    color: rgb(60, 60, 60);
+                    font-size: 18px;
+                }
+            }       
+        }
+    }
+    .header {
+        margin-top: 30px;
+        margin-bottom: 94px;
+        ::before {
+            content: '';
+            z-index: -1;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+        }
+        .title { 
+            font-weight: normal;   
+            font-size: 40px;
+            margin: 0;
+            padding-bottom: 20px;
+            color: white;
+        }
+        .search-input {
+            font-size: 24px;
+            font-family: 'Roboto', sans-serif;
+            border-radius: 6px;
+            padding: 12px 16px;
+            width: 100%;
+            box-sizing: border-box;
+            color: rgba(0, 0, 0, 0.6);
+            border-style: none;
+            outline: none;
+        }
+    }
+    .intro-text  {
+        font-size: 20px;   
+    }
+    .movies {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(auto-fill, 300px);
+        row-gap: 24px;
+        column-gap: 32px;
+        img {
+            cursor: pointer;
+            object-fit: cover;
+            width: 100%;
+            height: 470px;
+        }
+    } 
+    .not-fould {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        .magnifying-glass {
+            width: 150px;
+            margin: auto;
+            margin-bottom: 32px;
+        }
+        .not-fould-oops {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .not-fould-text {
+            width: 350px;
+            font-size: 20px;
+            text-align: center;
+            color: #000000A6;
+            margin: auto;
+            .refresh {
+                color: rgb(0, 119, 255);
+                text-decoration:underline 1px;
+                cursor: pointer;
+            }
+        }
+    }
+}

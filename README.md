@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://todo-app-arc.netlify.app/">
+    <a href="https://movie-finder-alexandre.netlify.app/">
       Demo
     </a>
   </h3>

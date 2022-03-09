@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://movie-finder-alexandre.netlify.app/">
+    <a href="https://movie-finder-alexandre.herokuapp.com/">
       Demo
     </a>
   </h3>
